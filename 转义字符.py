@@ -1,0 +1,5 @@
+print('hello')
+print('word')
+print('love\npython')
+print('love\tpython')
+print("\tlove_python")
