@@ -50,14 +50,14 @@ data2 = testb.fetchall()
 
 import smtplib
 from email.mime.text import MIMEText
-from_addr = '1606059673@qq.com'
-password = 'qlkgwylisoifjdgh'
-to_addr = 'yunweilist@irongbei.com'
+from_addr = 'xx@qq.com'
+password = 'xx'
+to_addr = 'xx@gmail.com'
 smtp_server = 'smtp.qq.com'
 mail_msg = f'prod.vvt.总体积:{data2}\nvvt各表详情:\n{tb}'
 msg = MIMEText(mail_msg,'plain','utf-8')
 msg["Subject"] = 'MySQL状态通知'
-msg["From"] = '于芳涛'
+msg["From"] = 'xx'
 server = smtplib.SMTP(smtp_server,25)
 server.login(from_addr,password)
 server.sendmail(from_addr,to_addr,msg.as_string())
