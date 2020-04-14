@@ -30,7 +30,7 @@ server.quit()
 import prettytable as pt
 from prettytable import from_db_cursor
 import MySQLdb.cursors
-db = MySQLdb.connect("prod-irongbei-master.mysql.rds.aliyuncs.com", "ironbei_09981", "LEBYPZgnNEcFGORnw3L3","information_schema",cursorclass = MySQLdb.cursors.DictCursor)
+db = MySQLdb.connect("xxxx", "xxxx", "LEBYPZgnNEcFGORnw3L3","information_schema",cursorclass = MySQLdb.cursors.DictCursor)
 testc = db.cursor()
 testc.execute("SELECT TABLE_NAME,TABLE_ROWS as 'table_row',concat(Round(DATA_LENGTH/1024/1024,0),'MB') as 'table_size' FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA = 'vvt' ORDER BY TABLE_ROWS DESC;")
 data3 = (testc.fetchall())
